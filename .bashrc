@@ -124,3 +124,4 @@ fi
 
 source "$HOME/.git-prompt"
 
+export LD_PRELOAD="/home/omar/manual/stderred/build/libstderred.so${LD_PRELOAD:+:$LD_PRELOAD}"
