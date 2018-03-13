@@ -92,6 +92,7 @@ fi
 #alias la='ls -A'
 alias l='ls -la'
 alias v='vim'
+alias ..='cd ..'
 
 alias ga='git add'
 alias gc='git commit'
@@ -124,6 +125,16 @@ fi
 
 source "$HOME/.git-prompt"
 
-export LD_PRELOAD="/home/omar/manual/stderred/build/libstderred.so${LD_PRELOAD:+:$LD_PRELOAD}"
+export LD_PRELOAD="~/manual/stderred/build/libstderred.so${LD_PRELOAD:+:$LD_PRELOAD}"
 
-export WORKON_HOME="$HOME/workspace/pyenvs"
+export WORKON_HOME="$HOME/workspace/.pyenvs"
+source "/usr/local/bin/virtualenvwrapper.sh"
+
+alias awsmfa='python ~/workspace/aws-mfa/awsmfa.py'
+
+function cdls {
+  cd "$@" && l
+}
+alias cd='cdls'
+
+export PATH="~/bin/:$PATH"
