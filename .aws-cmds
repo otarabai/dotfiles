@@ -1,0 +1,25 @@
+# auto mfa
+complete -W "$(ls -1 ~/.aws/*.mfa  | awk -F "/" '{print $5}' |  sed -e 's/\.mfa$//')" mfa
+function mfa () {
+    oathtool --base32 --totp "$(cat ~/.aws/$1.mfa)" | tee >(pbcopy) ;
+}
+
+# AWS profile switch 
+complete -W "$(cat ~/.aws/config |grep '\[profile' | sed 's/\[profile //' | sed 's/\]//')" paws
+function paws() {
+  export AWS_DEFAULT_PROFILE=$1
+}
+
+# AWS region set
+complete -W "ap-south-1 eu-west-3 eu-west-2 eu-west-1 ap-northeast-2 ap-northeast-1 sa-east-1 ca-central-1 ap-southeast-1 ap-southeast-2 eu-central-1 us-east-1 us-east-2 us-west-1 us-west-2" region_aws
+function region_aws() {
+  export AWS_DEFAULT_REGION=$1
+}
+
+
+# AWS S3 force remove
+function rrm_s3() {
+	aws s3 rm s3://$1 --recursive
+	aws s3 rb s3://$1
+}
+
