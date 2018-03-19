@@ -96,7 +96,7 @@ alias ..='cd ..'
 
 alias ga='git add'
 alias gc='git commit'
-alias gd='git diff'
+alias gd='git --no-pager diff'
 alias gs='git status'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%cr%Creset %Cblue[%ar]%Creset %C(bold blue)<%an>%Creset' --color --abbrev-commit"
 alias gpush='git push'
