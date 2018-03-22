@@ -5,3 +5,4 @@ for FILE in $(find "${HOME}/.local/shell" -type f); do
 done
 
 unset FILE
+source ~/.git-completion.bash
