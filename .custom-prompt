@@ -53,6 +53,9 @@ prompt_command() {
     if [ -n "${VIRTUAL_ENV}" ]; then
         PS1="$(pc white bold)($(basename "${VIRTUAL_ENV}"))$(pc reset)${PS1}"
     fi
+    if [ -n "${AWSUME_PROFILE}" ]; then
+        PS1="$(pc yellow bold)[$(basename "${AWSUME_PROFILE}")]$(pc reset)${PS1}"
+    fi
 }
 PROMPT_COMMAND=prompt_command
 PROMPT_DIRTRIM=3

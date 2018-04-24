@@ -123,7 +123,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-source "$HOME/.git-prompt"
+source "$HOME/.custom-prompt"
 source "$HOME/.aws-cmds"
 
 export LD_PRELOAD="~/manual/stderred/build/libstderred.so${LD_PRELOAD:+:$LD_PRELOAD}"
