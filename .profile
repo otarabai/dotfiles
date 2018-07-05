@@ -17,3 +17,6 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+# go vars
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$HOME/go/bin
