@@ -138,7 +138,7 @@ function cdls {
 }
 alias cd='cdls'
 
-export PATH="$HOME/bin/:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 #AWSume alias to source the AWSume script
 alias awsume=". awsume"
