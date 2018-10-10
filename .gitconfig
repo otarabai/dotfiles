@@ -1,8 +1,0 @@
-[user]
-	email = omar@tarabai.com
-	name = Omar Tarabai
-[push]
-	default = simple
-[credential]
-	helper = !aws codecommit credential-helper $@
-	UseHttpPath = true
