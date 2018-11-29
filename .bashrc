@@ -155,4 +155,5 @@ _awsume() {
     return 0
 }
 complete -F _awsume awsume
+workon main
 
