@@ -26,7 +26,7 @@ parse_git_repo() {
     local repo stashc
 
     if git rev-parse --git-dir >/dev/null 2>&1; then
-        stashc="$(git stash list 2>/dev/null | wc -l)"
+        stashc="$(git stash list 2>/dev/null | wc -l | xargs)"
         if [ ${stashc} = 0 ]; then
             stashc=
         else
